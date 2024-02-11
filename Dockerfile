@@ -20,6 +20,6 @@ ENV INPUT_FILE input.tex
 
 # EXPOSE 5000
 
-CMD xelatex $INPUT_FILE
+CMD xelatex -interaction nonstopmode $INPUT_FILE
 
 # docker container run --name latex --rm -it -v /usr/share/fonts/truetype:/usr/share/fonts/truetype -v $(pwd)/latex-files/:/latex-files amirstm/latex bash
